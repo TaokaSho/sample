@@ -1,0 +1,176 @@
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  color: white;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+.header:hover {
+  transform: scaleY(1.05); /* ヘッダーにホバー時のエフェクト */
+}
+
+.search-box {
+  flex: 1; /* 横幅を広げる */
+  max-width: 400px; /* 最大幅を設定 */
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  margin-right: 16px; /* 投稿ボタンとの間に余白を追加 */
+}
+
+.post-button {
+  background-color: #3b82f6; /* 水色 */
+  color: white;
+  padding: 12px 24px; /* ボタンを大きくする */
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #2563eb; /* ホバー時に濃い水色 */
+}
+
+/* メニュー */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  position: fixed; /* 固定表示 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 横幅一杯 */
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(0); /* 初期状態で表示 */
+  transition: transform 0.3s ease;
+}
+
+.nav-menu.hidden {
+  transform: translateY(-100%); /* 隠れる状態 */
+}
+
+.nav-menu a {
+  color: #1e293b;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-menu a:hover {
+  background-color: #e2e8f0;
+}
+
+/* メインエリア */
+.main {
+  display: flex;
+  flex: 1;
+  padding: 24px;
+  gap: 32px;
+  margin-top: 60px; /* メニューの高さ分調整 */
+}
+
+/* タグ欄と投稿の位置調整 */
+.post-list {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px; /* タグ欄と位置を揃える */
+}
+
+.tag-sidebar {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 84px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 24px; /* 投稿と位置を揃える */
+}
+/* 投稿一覧 */
+.post-list {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px; /* タグ欄と位置を揃える */
+}
+
+/* 投稿ボックス */
+.post {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* 横並びに配置 */
+  gap: 16px; /* 画像とコンテンツの間に余白を追加 */
+  align-items: center; /* 上揃えに配置 */
+}
+
+.profile-img {
+  width: 64px; /* 画像の幅 */
+  height: 64px; /* 画像の高さ */
+  border-radius: 50%; /* 丸く表示 */
+  object-fit: cover; /* 画像を枠内に収める */
+  margin: 0,auto;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* コンテンツ内の要素間の余白 */
+  flex: 1; /* 残りのスペースを占有 */
+}
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0;
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.post-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #bae6fd; /* 水色のタグ背景 */
+  color: #1e293b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.post-stats {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+/* 背景色 */
+body {
+  background-color: #f0f9ff; /* 水色を基調とした背景色 */
+  margin: 0;
+  font-family: sans-serif;
+}
